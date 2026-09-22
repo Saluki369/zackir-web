@@ -191,6 +191,48 @@ footer.site {
 
 footer.site a {
   color: #9FBFC2;
+  margin: 0 8px;
+}
+
+footer.site .legal-links {
+  margin-bottom: 10px;
+}
+
+/* ── Rechtstext-Seiten (Impressum/Datenschutz) ─────────────── */
+
+.legal-page {
+  padding: 48px 0 72px;
+  max-width: 720px;
+}
+
+.legal-page h1 {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.legal-page section {
+  margin-bottom: 28px;
+}
+
+.legal-page h2 {
+  font-size: 17px;
+  color: var(--petrol);
+  margin-bottom: 8px;
+}
+
+.legal-page p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #33474A;
+  margin: 0 0 4px;
+}
+
+.legal-page .back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--petrol);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
