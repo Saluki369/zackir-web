@@ -1,21 +1,16 @@
-// Rotierende Claims im Hero-Bereich - dieselben drei mehrsprachigen
-// Ausdrücke auf jeder Sprachversion der Seite (bewusstes Markenspiel,
-// analog zur App).
+// Statischer Claim im Hero-Bereich, ein fester Spruch pro Sprachversion
+// (keine Rotation mehr - vorher liefen mehrere Sprueche durch, teils sogar
+// sprachuebergreifend gemischt, was verwirrend wirkte).
 (function () {
-  const CLAIMS = ["Zackir's Dir", "Zackir it", "Zackíralo!"];
+  const CLAIM_BY_LANG = {
+    de: "Zackir's Dir",
+    en: 'Zackir it',
+    es: 'Zackíralo!',
+  };
+  const lang = document.documentElement.lang || 'de';
   const el = document.querySelector('[data-claim-rotator]');
   if (!el) return;
 
-  let index = 0;
-  el.textContent = CLAIMS[0];
+  el.textContent = CLAIM_BY_LANG[lang] || CLAIM_BY_LANG.de;
   el.classList.add('visible');
-
-  setInterval(() => {
-    el.classList.remove('visible');
-    setTimeout(() => {
-      index = (index + 1) % CLAIMS.length;
-      el.textContent = CLAIMS[index];
-      el.classList.add('visible');
-    }, 400);
-  }, 2600);
 })();
