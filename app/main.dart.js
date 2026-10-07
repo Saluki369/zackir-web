@@ -112764,7 +112764,7 @@ case 3:return A.u(null,r)}})
 return A.v($async$$0,r)},
 $S:10}
 A.aGn.prototype={
-$0(){return this.a.tw("https://t.me/share/url?url=zackir.com&text="+this.b)},
+$0(){return this.a.tw("https://t.me/share/url?url="+this.b)},
 $S:10}
 A.aGo.prototype={
 $1(a){var s,r,q,p,o,n=null,m=t.D,l=A.b([],m)
